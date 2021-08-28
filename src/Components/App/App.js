@@ -3,12 +3,14 @@ import Header from '../Header/Header';
 import Search from '../../Pages/Search/Search';
 import Explore from '../../Pages/Explore/Explore';
 import Beer from '../../Pages/Beer/Beer';
+import { ScrollToTop } from '../Helpers/Functions';
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 
 function App() {
   return (
     <div className='content'>
       <Router>
+        <ScrollToTop />
         <Header />
         <Switch>
           <Route exact path='/'>
