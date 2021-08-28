@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;500&family=Inter:wght@300;400&display=swap');
 
 :root {
+
+  width: 100%;
+
   --color-ink: #000;
   --color-primary: #EEF3AE;
   --color-subdued: #767676;
@@ -40,10 +43,12 @@
 
 html {
   background-color: var(--color-ink);
+  width: 100%;
 }
 
 body {
   margin: 0;
+  width: 100%;
   font-family: var(--font-family-secondary);
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
