@@ -1,0 +1,69 @@
+.beerCard {
+    /* border: var(--border-style); */
+    flex-basis: calc(100% / 3);
+    flex-grow: 1;
+    flex-shrink: 1;
+    padding: 0;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    transition: all .2s ease-out;
+}
+
+.beerCard::after {
+    content: '';
+    position: absolute;
+    border: var(--border-style);
+    top: -1.5px;
+    right: -1.5px;
+    bottom: -1.5px;
+    left: -1.5px;
+    pointer-events: none;
+}
+
+.beerCard:hover {
+    background-color: var(--color-secondary);
+    color: var(--color-reverse);
+    transition: all .2s ease-out;
+}
+
+.beerCard .icon {
+    width: 16px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.beerCard .beerModel {
+    flex-basis: 30%;
+    margin: 20px;
+    flex-grow: 0;
+    --poster-color: var(--color-primary);
+    
+}
+
+@media all and (max-width:1024px) {
+    .beerCard .beerModel {
+        flex-basis: 30%;
+        margin: 5px 10px;
+        
+    }
+}
+
+.beerCard .beerModel::part(default-progress-bar) {
+    visibility: hidden;
+}
+/* 
+.beerCard .beerModel::part(default-progress-mask) {
+    background-color: red;
+    transform: scale(2);
+} */
+
+.beerCard .cardText {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 50%;
+    overflow-wrap: anywhere;
+}

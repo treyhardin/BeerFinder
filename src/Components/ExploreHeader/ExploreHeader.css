@@ -1,0 +1,20 @@
+.exploreHeader {
+    position: relative;
+    margin: 0;
+    padding: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-reverse);
+}
+
+.exploreHeader::after {
+    content: '';
+    position: absolute;
+    border: var(--border-style);
+    top: -1.5px;
+    right: -1.5px;
+    bottom: -1.5px;
+    left: -1.5px;
+}

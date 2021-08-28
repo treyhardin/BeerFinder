@@ -1,0 +1,10 @@
+.beerList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.beerList .beerCard {
+    /* flex-grow: 0; */
+    flex-shrink: 1;
+}

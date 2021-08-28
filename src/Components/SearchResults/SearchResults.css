@@ -1,0 +1,20 @@
+
+.searchResults {
+    /* visibility: hidden; */
+    position: absolute;
+    left: -1.5px;
+    right: -1.5px;
+    top: calc(100% - 1.5px);
+    max-height: 200px;
+    overflow-x: visible;
+    overflow-y: scroll;
+    transition: all .2s ease-out;
+    /* background: var(--color-reverse); */
+    border-bottom: var(--border-style);
+    border-left: var(--border-style);
+    border-right: var(--border-style);
+}
+
+.searchResults.active {
+    visibility: visible;
+}
