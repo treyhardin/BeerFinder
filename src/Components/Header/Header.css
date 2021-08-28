@@ -43,6 +43,11 @@ header {
     line-height: 1;
 }
 
+.navLink.active {
+    text-decoration: underline;
+    text-decoration-color: var(--color-secondary);
+}
+
 .navLink:hover {
     background-color: var(--color-secondary);
     color: var(--color-reverse);
