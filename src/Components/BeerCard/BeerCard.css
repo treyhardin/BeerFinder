@@ -56,11 +56,10 @@
 .beerCard .beerModel::part(default-progress-bar) {
     visibility: hidden;
 }
-/* 
+
 .beerCard .beerModel::part(default-progress-mask) {
-    background-color: red;
-    transform: scale(2);
-} */
+    display: none;
+}
 
 .beerCard .cardText {
     flex-grow: 0;

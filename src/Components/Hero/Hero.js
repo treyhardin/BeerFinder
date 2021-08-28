@@ -5,7 +5,7 @@ export default function Hero(props) {
     const model = process.env.PUBLIC_URL + '/BeerCan.gltf';
     return (
         <div className='hero'>
-            <model-viewer src={model} class='model' alt="A 3D model of an astronaut" environment-image="neutral" auto-rotate rotation-per-second="40deg"></model-viewer>
+            <model-viewer src={model} class='model' alt={`A 3D model of ${props.name} beer`} environment-image="neutral" auto-rotate rotation-per-second="40deg" auto-rotate-delay='0'></model-viewer>
             { props.beer !== null ? 
             <div className='heroText'>
                 <div className='heroTop'>

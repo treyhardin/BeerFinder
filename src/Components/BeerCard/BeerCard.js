@@ -38,7 +38,7 @@ export default function BeerCard(props) {
         <Link to={slug} className='beerCard'>
            
                 {Icon('cornerArrow')}
-                <model-viewer class='beerModel' src={model} alt="A 3D model of an astronaut" environment-image="neutral" auto-rotate></model-viewer>
+                <model-viewer class='beerModel' src={model} alt={`A 3D model of ${props.name} beer`} environment-image="neutral" auto-rotate auto-rotate-delay='0'></model-viewer>
                 <div className='cardText'>
                     <h3 className='u-h2'>{props.name}</h3>
                     <p className='utility'>{props.brewery}</p>
