@@ -9,7 +9,7 @@ const beers = [
             "beer_style": "IPA",
         },
         "brewery": {
-            "brewery_name": "Three\'s Brewing"
+            "brewery_name": "Three's Brewing"
         },
         "similar": {
             "items": [
@@ -357,7 +357,7 @@ const beers = [
     {
         "beer": {
             "bid": 8,
-            "beer_name": "Everything\'s Ok",
+            "beer_name": "Everything's Ok",
             "beer_label": "https://d1c8v1qci5en44.cloudfront.net/site/beer_logos/beer-_16630_sm_96f50e03ae848a4a368a787b38f989.jpeg",
             "beer_slug": "everythings-ok",
             "beer_description": "The long, cold nights of winter are a little brighter with Celebration Ale. Wonderfully robust and rich, Celebration Ale is dry-hopped for a lively, intense aroma. Brewed especially for the holidays, it is perfect for a festive gathering or for a quiet evening at home.",
