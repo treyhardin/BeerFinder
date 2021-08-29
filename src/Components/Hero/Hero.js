@@ -10,34 +10,22 @@ export default function Hero(props) {
     
     useEffect(() => {
 
-        if(props.beer) {
+        if(props.beer && modelViewerTexture.loaded) {
 
             labelImg = props.beer.beer.beer_label;
-
-            modelViewerTexture.addEventListener("load", async (ev) => {
-                let loadedModel = await modelViewerTexture.model;
-                material = loadedModel.materials[0];
-            })
             
             const loadLabel = async () => {
-                
+                material = modelViewerTexture.model.materials[0];
                 let applyPBRTexture = (src) => {
                     material.pbrMetallicRoughness.baseColorTexture.texture.source.setURI(src);
                 }
                 applyPBRTexture(labelImg);
             }
 
-            // modelViewerTexture.addEventListener("load", async (ev) => {
-            //     let modelLoad = await modelViewerTexture;
-            //     loadLabel(modelLoad);
-            // })
-
-            // loadLabel();
+            loadLabel();
         }
     
     })
-
-
 
     return (
         <div className='hero'>
