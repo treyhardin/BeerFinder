@@ -8,7 +8,7 @@ const BeerList = (props) => {
         <div className='beerList'>
             {props.beers.map(item => {
                 // return <p>{beer.name}</p>;
-                return <BeerCard key={'beer_' + item.beer.bid} name={item.beer.beer_name} brewery={item.brewery.brewery_name} slug={item.beer.beer_slug} />
+                return <BeerCard key={'beer_' + item.beer.bid} name={item.beer.beer_name} brewery={item.brewery.brewery_name} slug={item.beer.beer_slug} label={item.beer.beer_label} />
             })}
 
         </div>

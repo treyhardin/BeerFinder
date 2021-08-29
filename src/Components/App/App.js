@@ -1,3 +1,4 @@
+import { useRef, useEffect } from 'react';
 import './App.css';
 import Header from '../Header/Header';
 import Search from '../../Pages/Search/Search';
@@ -7,6 +8,9 @@ import { ScrollToTop } from '../Helpers/Functions';
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 
 function App() {
+
+  
+
   return (
     <div className='content'>
       <Router>

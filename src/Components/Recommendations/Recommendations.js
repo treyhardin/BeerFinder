@@ -18,7 +18,7 @@ export default function Recommendations(props) {
             </div>
                 {props.beer.similar.items.map(item => {
                     let slug = beers.find(findItem => findItem.beer.bid === item.beer.bid);
-                    return <BeerCard key={'beer_' + item.beer.bid} name={item.beer.beer_name} brewery={item.brewery.brewery_name} slug={slug.beer.beer_slug} />
+                    return <BeerCard key={'beer_' + item.beer.bid} name={item.beer.beer_name} brewery={item.brewery.brewery_name} slug={slug.beer.beer_slug} label={item.beer.beer_label} />
                 })}
         </div>
     )
