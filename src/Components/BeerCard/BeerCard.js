@@ -39,14 +39,18 @@ export default function BeerCard(props) {
 
         modelViewerTexture.addEventListener("load", (ev) => {
 
-            let material = modelViewerTexture.model.materials[0];
+            if (modelViewerTexture) {
+                
+                let material = modelViewerTexture.model.materials[0];
+    
+                let applyPBRTexture = (channel, src) => {
+                    material.pbrMetallicRoughness.baseColorTexture.texture.source.setURI(src);
+                }
+    
+                applyPBRTexture('baseColorTexture', labelImg);
 
-            let applyPBRTexture = (channel, src) => {
-                material.pbrMetallicRoughness.baseColorTexture.texture.source.setURI(src);
             }
 
-            applyPBRTexture('baseColorTexture', labelImg);
-            
         })
     })
                 

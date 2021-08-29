@@ -2,47 +2,46 @@ import React, { useRef, useState, useEffect } from 'react';
 import './Hero.css';
 
 export default function Hero(props) {
-    const [selectedBeer, setBeer] = useState(props.beer);
-
     const model = process.env.PUBLIC_URL + '/BeerCan.gltf';
 
+    let modelViewerTexture = null;
+    let labelImg;
+    let material;
     
-
-    let modelViewerTexture = useRef(null);
-    console.log(modelViewerTexture);
-
     useEffect(() => {
 
-        if (props.beer) {
+        if(props.beer) {
 
+            labelImg = props.beer.beer.beer_label;
 
-            let labelImg = props.beer.beer.beer_label;
-
-            const updateTexture = () => {
-                let material = modelViewerTexture.model.materials[0];
-
-                let applyPBRTexture = (channel, src) => {
+            modelViewerTexture.addEventListener("load", async (ev) => {
+                let loadedModel = await modelViewerTexture.model;
+                material = loadedModel.materials[0];
+            })
+            
+            const loadLabel = async () => {
+                
+                let applyPBRTexture = (src) => {
                     material.pbrMetallicRoughness.baseColorTexture.texture.source.setURI(src);
                 }
-
-                applyPBRTexture('baseColorTexture', labelImg);
+                applyPBRTexture(labelImg);
             }
 
-            modelViewerTexture.addEventListener("load", (ev) => {
-                updateTexture();
-            })
+            // modelViewerTexture.addEventListener("load", async (ev) => {
+            //     let modelLoad = await modelViewerTexture;
+            //     loadLabel(modelLoad);
+            // })
 
-            if (modelViewerTexture) {
-                updateTexture();
-            }
-
+            // loadLabel();
         }
+    
     })
+
 
 
     return (
         <div className='hero'>
-            <model-viewer src={model} ref={obj => {modelViewerTexture = obj}} class='model' alt={`A 3D model of ${props.name} beer`} environment-image="neutral" auto-rotate rotation-per-second="40deg" auto-rotate-delay='0'></model-viewer>
+            <model-viewer src={model} ref={obj => {modelViewerTexture = obj}} class='model' alt={`A 3D model of a beer`} environment-image="neutral" auto-rotate rotation-per-second="40deg" auto-rotate-delay='0'></model-viewer>
             { props.beer !== null ? 
             <div className='heroText'>
                 <div className='heroTop'>

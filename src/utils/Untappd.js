@@ -224,7 +224,7 @@ const beers = [
                         "bid": 2,
                         "beer_name": "Stone Enjoy By 12.26.14 IPA",
                         "beer_style": "Imperial / Double IPA",
-                        "beer_label": "https://d1c8v1qci5en44.cloudfront.net/site/beer_logos/beer-881386_1a85e_sm.jpeg",
+                        "beer_label": process.env.PUBLIC_URL + "/Label_DaisyCutter.png",
                     },
                     "brewery": {
                         "brewery_name": "Stone Brewing Co.",
@@ -274,7 +274,7 @@ const beers = [
                         "bid": 2,
                         "beer_name": "Stone Enjoy By 12.26.14 IPA",
                         "beer_style": "Imperial / Double IPA",
-                        "beer_label": "https://d1c8v1qci5en44.cloudfront.net/site/beer_logos/beer-881386_1a85e_sm.jpeg",
+                        "beer_label": process.env.PUBLIC_URL + "/Label_PseudoSue.png",
                     },
                     "brewery": {
                         "brewery_name": "Stone Brewing Co.",
@@ -324,7 +324,7 @@ const beers = [
                         "bid": 2,
                         "beer_name": "Stone Enjoy By 12.26.14 IPA",
                         "beer_style": "Imperial / Double IPA",
-                        "beer_label": "https://d1c8v1qci5en44.cloudfront.net/site/beer_logos/beer-881386_1a85e_sm.jpeg",
+                        "beer_label": process.env.PUBLIC_URL + "/Label_420.png",
                     },
                     "brewery": {
                         "brewery_name": "Stone Brewing Co.",
@@ -374,7 +374,7 @@ const beers = [
                         "bid": 2,
                         "beer_name": "Stone Enjoy By 12.26.14 IPA",
                         "beer_style": "Imperial / Double IPA",
-                        "beer_label": "https://d1c8v1qci5en44.cloudfront.net/site/beer_logos/beer-881386_1a85e_sm.jpeg",
+                        "beer_label": process.env.PUBLIC_URL + "/Label_PseudoSue.png",
                     },
                     "brewery": {
                         "brewery_name": "Stone Brewing Co.",
@@ -424,7 +424,7 @@ const beers = [
                         "bid": 2,
                         "beer_name": "Stone Enjoy By 12.26.14 IPA",
                         "beer_style": "Imperial / Double IPA",
-                        "beer_label": "https://d1c8v1qci5en44.cloudfront.net/site/beer_logos/beer-881386_1a85e_sm.jpeg",
+                        "beer_label": process.env.PUBLIC_URL + "/Label_SpaceStation.png",
                     },
                     "brewery": {
                         "brewery_name": "Stone Brewing Co.",
@@ -474,7 +474,7 @@ const beers = [
                         "bid": 2,
                         "beer_name": "Stone Enjoy By 12.26.14 IPA",
                         "beer_style": "Imperial / Double IPA",
-                        "beer_label": "https://d1c8v1qci5en44.cloudfront.net/site/beer_logos/beer-881386_1a85e_sm.jpeg",
+                        "beer_label": process.env.PUBLIC_URL + "/Label_PseudoSue.png",
                     },
                     "brewery": {
                         "brewery_name": "Stone Brewing Co.",
@@ -524,7 +524,7 @@ const beers = [
                         "bid": 2,
                         "beer_name": "Stone Enjoy By 12.26.14 IPA",
                         "beer_style": "Imperial / Double IPA",
-                        "beer_label": "https://d1c8v1qci5en44.cloudfront.net/site/beer_logos/beer-881386_1a85e_sm.jpeg",
+                        "beer_label": process.env.PUBLIC_URL + "/Label_SpaceStation.png",
                     },
                     "brewery": {
                         "brewery_name": "Stone Brewing Co.",
