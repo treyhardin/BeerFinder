@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import './SearchForm.css';
 import Icon from '../Helpers/Icons';
-import SearchItem from '../SearchItem/SearchItem';
 import SearchResults from '../SearchResults/SearchResults';
-import beers from '../../utils/Untappd';
 
 export default function SearchForm() {
 
@@ -18,11 +16,9 @@ export default function SearchForm() {
         const input = e.target.value;
         
         if(input) {
-            console.log(input);
             setActive(true);
             setInput(input);
         } else {
-            console.log('EMPTY');
             actionIcon = Icon('cornerArrow');
             setActive(false);
             setInput(null);

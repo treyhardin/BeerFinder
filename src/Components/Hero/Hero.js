@@ -4,28 +4,31 @@ import './Hero.css';
 export default function Hero(props) {
     const model = process.env.PUBLIC_URL + '/BeerCan.gltf';
 
-    let modelViewerTexture = null;
+    let modelViewerTexture = useRef(null);
     let labelImg;
     let material;
+
+    const applyPBRTexture = (material, src) => {
+        material.pbrMetallicRoughness.baseColorTexture.texture.source.setURI(src);
+    }
     
     useEffect(() => {
-
-        if(props.beer && modelViewerTexture.loaded) {
-
-            labelImg = props.beer.beer.beer_label;
-            
-            const loadLabel = async () => {
-                material = modelViewerTexture.model.materials[0];
-                let applyPBRTexture = (src) => {
-                    material.pbrMetallicRoughness.baseColorTexture.texture.source.setURI(src);
-                }
-                applyPBRTexture(labelImg);
-            }
-
-            loadLabel();
+        if(props.beer) {
+            console.log('Side Effect with NO Model Loaded')
+            modelViewerTexture.addEventListener("load", (ev) => {
+                console.log('Model Now Loaded');
+                labelImg = props.beer.beer.beer_label;
+                applyPBRTexture(modelViewerTexture.model.materials[0], labelImg);
+            });
         }
-    
-    })
+        if(props.beer && modelViewerTexture.loaded) {
+            console.log('Model Rerender');
+            labelImg = props.beer.beer.beer_label;
+            applyPBRTexture(modelViewerTexture.model.materials[0], labelImg);
+            
+        }
+        
+    }, [props.beer])
 
     return (
         <div className='hero'>
