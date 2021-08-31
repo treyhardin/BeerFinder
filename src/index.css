@@ -5,10 +5,11 @@
   width: 100%;
 
   --color-ink: #000;
-  --color-primary: #EEF3AE;
+  --color-primary: #FFCD83;
   --color-subdued: #767676;
   --color-reverse: #fff;
   --color-secondary: #0047FF;
+  --background-gradient: radial-gradient(at 95% 94%, hsla(202,86%,59%,1) 0, transparent 50%);
 
   --font-family-primary: 'Space Mono', monospace;
   --font-family-secondary: 'Inter', sans-serif;
@@ -42,7 +43,8 @@
 }
 
 html {
-  background-color: var(--color-ink);
+  /* background-color: var(--color-ink); */
+  /* background-image: var(--background-gradient); */
   width: 100%;
 }
 
@@ -54,6 +56,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--color-primary);
+  background-image: var(--background-gradient);
   border: var(--border-style);
 }
 

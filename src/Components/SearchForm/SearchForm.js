@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import './SearchForm.css';
 import Icon from '../Helpers/Icons';
 import SearchResults from '../SearchResults/SearchResults';
+import gsap, { Power3 } from 'gsap';
 
 export default function SearchForm() {
 
@@ -25,9 +26,21 @@ export default function SearchForm() {
         }
     }
 
+    let searchFormObj;
+
+    useEffect(() => {
+        gsap.from(searchFormObj, {
+            duration: .8,
+            delay: .3,
+            ease: "Power3.out",
+            opacity: 0,
+            y: 40
+        })
+    });
+
 
     return (
-        <div className="searchForm">
+        <div className="searchForm" ref={obj => searchFormObj = obj}>
             <input className='u-h1' type="text" placeholder="I like..." onChange={handleChange} />
             {actionIcon}
             <SearchResults input={searchInput} />

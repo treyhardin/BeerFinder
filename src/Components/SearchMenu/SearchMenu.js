@@ -11,8 +11,8 @@ export default function SearchMenu() {
 
     useEffect(() => {
         gsap.from(introText, {
-            duration: 2,
-            ease: "power3.out",
+            duration: .8,
+            ease: "Power3.out",
             opacity: 0,
             y: 40
         })

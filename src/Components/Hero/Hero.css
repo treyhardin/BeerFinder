@@ -22,7 +22,7 @@
 
 .hero .model {
     flex-basis: 75%;
-    --poster-color: var(--color-primary);
+    --poster-color: transparent;
     flex-grow: 0;
     flex-shrink: 1;
     width: auto;

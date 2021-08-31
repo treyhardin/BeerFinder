@@ -13,3 +13,47 @@
         flex-direction: column;
     }
 }
+
+#badge {
+    position: absolute;
+    transform: rotate(25deg);
+    width: 120px;
+    top: 15vh;
+    right: 60px;
+}
+
+@media all and (max-width: 1024px) {
+    #badge {
+        top: unset;
+        right: 30px;
+        bottom: 30px;
+    }
+}
+
+#badge svg {
+    animation: rotate 30s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+  
+    to {
+        transform: rotate(360deg);
+    }
+  }
+
+
+.badgeInner {
+    position: relative;
+}
+
+.badgeText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 10px;
+}
