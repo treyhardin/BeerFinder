@@ -8,7 +8,7 @@ export default function Headers(props) {
     let headerObj;
 
     useEffect(() => {
-        if(props.load){
+        if(!props.load){
             gsap.from(headerObj, {
                 duration: 1,
                 opacity: 0,
