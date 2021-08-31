@@ -32,7 +32,7 @@ export default function Hero(props) {
 
     return (
         <div className='hero'>
-            <model-viewer src={model} ref={obj => {modelViewerTexture = obj}} class='model' alt={`A 3D model of a beer`} environment-image="neutral" auto-rotate rotation-per-second="40deg" auto-rotate-delay='0'></model-viewer>
+            <model-viewer src={model} ref={obj => {modelViewerTexture = obj}} loading="eager" class='model' alt={`A 3D model of a beer`} environment-image="neutral" auto-rotate rotation-per-second="40deg" auto-rotate-delay='0'></model-viewer>
             { props.beer !== null ? 
             <div className='heroText'>
                 <div className='heroTop'>

@@ -5,13 +5,16 @@ import gsap, {Power3} from 'gsap';
 
 const BeerList = (props) => {
 
+
     useEffect(() => {
-        gsap.to(".beerCard", {
-            opacity: 1,
-            duration: .3,
-            ease: "Power3.out",
-            stagger: 0.15
-        })
+        if(!props.load){
+            gsap.to(".beerCard", {
+                opacity: 1,
+                duration: .3,
+                ease: "Power3.out",
+                stagger: 0.15
+            })
+        }
     })
 
     return (

@@ -5,18 +5,19 @@ import './SearchMenu.css';
 import gsap, { Power3 } from 'gsap';
 
 
-export default function SearchMenu() {
+export default function SearchMenu(props) {
 
     let introText = null;
 
     useEffect(() => {
         gsap.from(introText, {
-            duration: .8,
-            ease: "Power3.out",
+            duration: 1,
             opacity: 0,
-            y: 40
+            y: 40,
+            ease: "Power3.out"
         })
-    });
+    })
+
 
     return (
         <div className='searchMenu'>

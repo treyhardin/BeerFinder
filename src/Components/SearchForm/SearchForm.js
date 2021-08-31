@@ -4,7 +4,7 @@ import Icon from '../Helpers/Icons';
 import SearchResults from '../SearchResults/SearchResults';
 import gsap, { Power3 } from 'gsap';
 
-export default function SearchForm() {
+export default function SearchForm(props) {
 
     const [ isActive, setActive ] = useState(false);
     const [ searchInput, setInput ] = useState(null);
@@ -12,6 +12,8 @@ export default function SearchForm() {
     const resultsElement = document.getElementById('searchResults');
 
     let actionIcon = Icon('search');
+
+    let searchForm = null;
 
     const handleChange = (e) => {
         const input = e.target.value;
@@ -26,24 +28,24 @@ export default function SearchForm() {
         }
     }
 
-    let searchFormObj;
-
     useEffect(() => {
-        gsap.from(searchFormObj, {
-            duration: .8,
-            delay: .3,
-            ease: "Power3.out",
-            opacity: 0,
-            y: 40
-        })
-    });
+        if(!props.load) {
+            gsap.from(searchForm, {
+                duration: 1,
+                delay: .3,
+                opacity: 0,
+                y: 40,
+                ease: "Power3.out"
+            })
+        }
+    }, [props.load])
 
 
     return (
-        <div className="searchForm" ref={obj => searchFormObj = obj}>
+        <div className="searchForm" ref={obj => {searchForm = obj}}>
             <input className='u-h1' type="text" placeholder="I like..." onChange={handleChange} />
             {actionIcon}
-            <SearchResults input={searchInput} />
+            <SearchResults input={searchInput}/>
         </div>
 
     )

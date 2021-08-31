@@ -3,17 +3,20 @@ import { Link, NavLink } from 'react-router-dom';
 import './Header.css';
 import gsap, { Power3 } from 'gsap';
 
-export default function Headers() {
+export default function Headers(props) {
 
     let headerObj;
 
     useEffect(() => {
-        gsap.from(headerObj, {
-            duration: .8,
-            ease: "Power3.out",
-            yPercent: -100
-        })
-    });
+        if(props.load){
+            gsap.from(headerObj, {
+                duration: 1,
+                opacity: 0,
+                yPercent: -100,
+                ease: "Power3.out"
+            })
+        }
+    }, [props.load])
 
     return (
         <header ref={obj => headerObj = obj}>

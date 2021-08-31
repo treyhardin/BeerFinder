@@ -4,11 +4,11 @@ import BeerList from '../../Components/BeerList/BeerList';
 import ExploreHeader from '../../Components/ExploreHeader/ExploreHeader';
 import './Explore.css';
 
-export default function Explore() {
+export default function Explore(props) {
     return (
         <div className='exploreWrapper'>
             <ExploreHeader />
-            <BeerList beers={beers} />
+            <BeerList beers={beers} load={props.load} />
         </div>
     )
 }
