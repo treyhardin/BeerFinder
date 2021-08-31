@@ -1,8 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './BeerList.css';
 import BeerCard from '../BeerCard/BeerCard';
+import gsap, {Power3} from 'gsap';
 
 const BeerList = (props) => {
+
+    useEffect(() => {
+        gsap.to(".beerCard", {
+            opacity: 1,
+            duration: .3,
+            ease: "Power3.out",
+            stagger: 0.15
+        })
+    })
 
     return (
         <div className='beerList'>

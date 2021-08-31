@@ -1,10 +1,19 @@
-import React, { useState } from 'react';
+import React, { useEffect } from 'react';
 import './Recommendations.css'
 import BeerCard from '../BeerCard/BeerCard';
-import { convertToSlug } from '../Helpers/Functions';
 import beers from '../../utils/Untappd';
+import gsap, {Power3} from 'gsap';
 
 export default function Recommendations(props) {
+
+    useEffect(() => {
+        gsap.to(".beerCard", {
+            opacity: 1,
+            duration: .3,
+            ease: "Power3.out",
+            stagger: 0.15
+        })
+    })
 
     // let selectedBeer = props.beer;
     // let slugLookup = beers.find(item => item.beer.beer_slug === selectedBeer.beer.beer_slug);
